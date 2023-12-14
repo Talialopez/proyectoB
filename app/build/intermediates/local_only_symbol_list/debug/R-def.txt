@@ -1,0 +1,22 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable acuerdo
+drawable desacuerdo
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable neutro
+id btnDissagreement
+id btnNeutral
+id btnOK
+id linearLayout
+id tiitle
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.CarasBBVALocal
+style Theme.CarasBBVALocal
+xml backup_rules
+xml data_extraction_rules
