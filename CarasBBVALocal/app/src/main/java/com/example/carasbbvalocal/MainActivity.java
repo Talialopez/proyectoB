@@ -1,5 +1,6 @@
 package com.example.carasbbvalocal;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,8 +12,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import com.example.carasbbvalocal.R;
-
 public class MainActivity extends AppCompatActivity {
 
     private int score = 0;
@@ -21,8 +20,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
+        int orientation = getResources().getConfiguration().orientation;
+        if(orientation == Configuration.ORIENTATION_LANDSCAPE){
+            setContentView(R.layout.activity_main);
+        } else {
+            setContentView(R.layout.activity_main);
+        }
     }
 
     public void onOkClick(View view) {
@@ -51,3 +55,22 @@ public class MainActivity extends AppCompatActivity {
         Log.d("prueba", ("Current Score: " + score + " | Date and Time: " + formattedDateTime));
     }
 }
+
+
+class ConfirmarRegistro : AppCompatActivity() {
+
+        override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.confirmacion_registro)
+
+        iniciarTemporizador()
+        }
+
+private fun iniciarTemporizador() {
+        Handler().postDelayed({
+        val intent = Intent(this, IniciarSesion::class.java)
+        startActivity(intent)
+        finish()
+        }, 1000)
+        }
+        }

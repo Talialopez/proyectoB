@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">CarasBBVALocal</string>
+    <string name="app_name">BBVA</string>
+    <string name="tiitle">Valora nuestro servicio</string>
+    <string name="button_OK">Buen servicio</string>
+    <string name="button_neutral">Servicio neutro</string>
+    <string name="button_dissagreement">Mal servicio</string>
 </resources>
