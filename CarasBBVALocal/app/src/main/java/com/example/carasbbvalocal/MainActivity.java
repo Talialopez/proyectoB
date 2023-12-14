@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 }
 
 
-class ConfirmarRegistro : AppCompatActivity() {
+: AppCompatActivity() {
 
         override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
