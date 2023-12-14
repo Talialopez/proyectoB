@@ -56,21 +56,3 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
-
-: AppCompatActivity() {
-
-        override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.confirmacion_registro)
-
-        iniciarTemporizador()
-        }
-
-private fun iniciarTemporizador() {
-        Handler().postDelayed({
-        val intent = Intent(this, IniciarSesion::class.java)
-        startActivity(intent)
-        finish()
-        }, 1000)
-        }
-        }
