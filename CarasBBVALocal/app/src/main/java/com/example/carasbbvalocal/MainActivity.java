@@ -69,4 +69,12 @@ public class MainActivity extends AppCompatActivity {
         String formattedDateTime = getFormattedDateTime();
         Log.d("prueba", ("Su voto: " + voto +" | Puntuación total: " + score + " | Date and Time: " + formattedDateTime));
     }
+
+
+    private void lanzarGrateful() {
+
+                Intent intent = new Intent(MainActivity.this, grateful_activity.class);
+                startActivity(intent);
+                finish();
+    }
 }
