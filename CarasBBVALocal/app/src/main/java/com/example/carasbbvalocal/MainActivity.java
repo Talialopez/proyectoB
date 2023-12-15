@@ -2,6 +2,7 @@ package com.example.carasbbvalocal;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -9,6 +10,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private int voto = 0;
     private TextView tvScore;
 
+    private TextView tittleEn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +35,19 @@ public class MainActivity extends AppCompatActivity {
         } else {
             setContentView(R.layout.activity_main);
         }
+
+        tittleEn = findViewById(R.id.tittle);
+    }
+
+    private void actualizarResource(String idioma) {
+        Resources recursos = getResources();
+        Configuration configuracion = recursos.getConfiguration();
+        Locale locale = new Locale(idioma);
+        configuracion.setLocale(locale);
+        recursos.updateConfiguration(configuracion, recursos.getDisplayMetrics());
+
+        tittleEn.setText(recursos.getString(R.string.tittle));
+
     }
 
     public void onOkClick(View view) {
@@ -63,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         String formattedDateTime = getFormattedDateTime();
         Log.d("prueba", ("Su voto: " + voto +" | Puntuación total: " + score + " | Date and Time: " + formattedDateTime));
     }
+
 
 
     private void lanzarGrateful() {
