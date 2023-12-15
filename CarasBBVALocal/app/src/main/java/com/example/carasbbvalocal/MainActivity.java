@@ -54,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
         lanzarGrateful();
     }
 
+    private void lanzarGrateful() {
+        Intent intent = new Intent(MainActivity.this, grateful_activity.class);
+        startActivity(intent);
+        finish();
+    }
+
     private String getFormattedDateTime() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
         return sdf.format(new Date());
