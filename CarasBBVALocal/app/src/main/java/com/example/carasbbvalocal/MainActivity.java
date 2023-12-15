@@ -56,10 +56,7 @@ public class MainActivity extends AppCompatActivity {
         logScore();
         lanzarGrateful();
     }
-
-    private void lanzarGrateful() {
-    }
-
+    
     public void onNeutralClick(View view) {
         score += 2;
         voto=2;
