@@ -65,18 +65,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
-
-: AppCompatActivity() {
-
-        override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.confirmacion_registro)
-
-    private void lanzarGrateful() {
-
-                Intent intent = new Intent(MainActivity.this, grateful_activity.class);
-                startActivity(intent);
-                finish();
-    }
-}
