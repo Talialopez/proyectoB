@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
         lanzarGrateful();
     }
 
+    private void lanzarGrateful() {
+    }
+
     public void onNeutralClick(View view) {
         score += 2;
         voto=2;
@@ -82,8 +85,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("prueba", ("Su voto: " + voto +" | Puntuación total: " + score + " | Date and Time: " + formattedDateTime));
     }
 
-
-
+  
     private void lanzarGrateful() {
 
                 Intent intent = new Intent(MainActivity.this, grateful_activity.class);
@@ -91,3 +93,5 @@ public class MainActivity extends AppCompatActivity {
                 finish();
     }
 }
+
+
