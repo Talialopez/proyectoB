@@ -45,7 +45,7 @@
         <ImageButton
             android:id="@+id/btnNeutral"
             android:layout_width="wrap_content"
-            android:layout_heigh    t="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="1"
@@ -65,4 +65,16 @@
             app:srcCompat="@drawable/desacuerdo"
             android:onClick="onDisagreementClick"/>
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/en_flag"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_flag_us"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

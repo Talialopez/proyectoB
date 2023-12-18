@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
 
     <TextView
         android:id="@+id/tittle"
@@ -39,7 +40,8 @@
             android:layout_weight="1"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/button_OK"
-            app:srcCompat="@drawable/acuerdo" />
+            app:srcCompat="@drawable/acuerdo"
+            android:onClick="onOkClick"/>
 
         <ImageButton
             android:id="@+id/imageButton2"
@@ -51,7 +53,8 @@
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/button_neutral"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/neutro" />
+            app:srcCompat="@drawable/neutro"
+            android:onClick="onNeutralClick"/>
 
         <ImageButton
             android:id="@+id/imageButton3"
@@ -60,7 +63,8 @@
             android:layout_weight="1"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/button_dissagreement"
-            app:srcCompat="@drawable/desacuerdo" />
+            app:srcCompat="@drawable/desacuerdo"
+            android:onClick="onDisagreementClick"/>
     </LinearLayout>
 
     <ImageView

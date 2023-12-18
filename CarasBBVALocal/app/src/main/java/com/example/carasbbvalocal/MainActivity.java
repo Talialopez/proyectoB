@@ -21,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     private int score = 0;
     private int voto = 0;
-    private TextView tvScore;
-
     private TextView tittleEn;
 
     @Override
@@ -35,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             setContentView(R.layout.activity_main);
         }
-
         tittleEn = findViewById(R.id.tittle);
     }
 
@@ -79,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void logScore() {
         String formattedDateTime = getFormattedDateTime();
-        Log.d("prueba", ("Su voto: " + voto +" | Puntuación total: " + score + " | Date and Time: " + formattedDateTime));
+        Log.d("prueba", ("Su voto: " + voto +" | Date and Time: " + formattedDateTime));
     }
 
   
@@ -92,3 +89,6 @@ public class MainActivity extends AppCompatActivity {
 }
 
 
+// confirmar elección
+// logo
+// texto bajo cada opción
