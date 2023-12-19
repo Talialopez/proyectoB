@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">BBVA</string>
-    <string name="tittle">Rate our service</string>
-    <string name="button_OK">Good servie</string>
-    <string name="button_neutral">Neutral service</string>
-    <string name="button_dissagreement">Bad Service</string>
-</resources>

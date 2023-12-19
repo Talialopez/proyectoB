@@ -5,6 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Spinner
+        android:id="@+id/languageSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
     <TextView
         android:id="@+id/tittle"
         android:layout_width="wrap_content"
@@ -22,47 +33,38 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="133dp"
+        android:layout_width="324dp"
+        android:layout_height="117dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.665">
 
-        <ImageButton
-            android:id="@+id/btnOK"
+        <ImageView
+            android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:contentDescription="button_OK"
-            app:srcCompat="@drawable/acuerdo"
-            android:onClick="onOkClick"/>
+            android:onClick="onOkClick"
+            app:srcCompat="@drawable/alegre" />
 
-        <ImageButton
-            android:id="@+id/btnNeutral"
-            android:layout_width="wrap_content"
-            android:layout_heigh    t="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:contentDescription="button_neutral"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/neutro"
-            android:onClick="onNeutralClick"/>
-
-        <ImageButton
-            android:id="@+id/btnDissagreement"
+        <ImageView
+            android:id="@+id/imageView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:contentDescription="button_dissagreement"
-            app:srcCompat="@drawable/desacuerdo"
-            android:onClick="onDisagreementClick"/>
+            android:onClick="onNeutralClick"
+            app:srcCompat="@drawable/neutral" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onDisagreementClick"
+            app:srcCompat="@drawable/enfadado" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
