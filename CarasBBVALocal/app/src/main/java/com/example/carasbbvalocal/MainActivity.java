@@ -3,6 +3,7 @@ package com.example.carasbbvalocal;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -20,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     private int score = 0;
     private int voto = 0;
-    private TextView tittleEn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parentView) {
             }
         });
-        tittleEn = findViewById(R.id.tittle);
     }
 
     private void updateTexts(String selectedLanguage) {
@@ -108,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void logScore() {
         String formattedDateTime = getFormattedDateTime();
-        android.util.Log.d("prueba", ("Su voto: " + voto + " | Puntuación total: " + score + " | Date and Time: " + formattedDateTime));
         Log.d("prueba", ("Su voto: " + voto +" | Date and Time: " + formattedDateTime));
     }
 
