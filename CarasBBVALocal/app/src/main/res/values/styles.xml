@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Configuración del fondo -->
         <item name="android:windowBackground">@drawable/my_background</item>
+
+        <!-- Ocultar la barra de notificaciones -->
+        <item name="android:windowFullscreen">true</item>
     </style>
 </resources>
