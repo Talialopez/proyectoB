@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Actualizar el texto de la pantalla
-        titleTextView.setText(titleResourceId);
+        titleTextView.setText("Valora nuestro servicio");
     }
 
     public void onOkClick(View view) {
