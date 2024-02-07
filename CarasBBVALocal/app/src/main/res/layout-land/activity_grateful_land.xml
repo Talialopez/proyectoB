@@ -10,13 +10,26 @@
         android:id="@+id/gratitudetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:gravity="center"
         android:text="¡Gracias por su valoración!"
+        android:textColor="@color/tittle_grateful"
         android:textSize="58sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/tittle_grateful"
-        android:textStyle="bold"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logoBBVA"
+        android:layout_width="106sp"
+        android:layout_height="36sp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gratitudetext"
+        app:srcCompat="@drawable/logobbva" />
 </androidx.constraintlayout.widget.ConstraintLayout>

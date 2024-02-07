@@ -3,76 +3,86 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <Spinner
+        android:id="@+id/languageSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:entries="@array/languages"/>
 
     <TextView
         android:id="@+id/tittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="56dp"
         android:text="Valora nuestro servicio"
-        android:textSize="48sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282" />
+        app:layout_constraintVertical_bias="0.435" />
+
+    <ImageView
+        android:id="@+id/logoBBVA"
+        android:layout_width="106sp"
+        android:layout_height="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logobbva"
+        android:layout_margin="16sp"/>
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="133dp"
+        android:layout_width="571dp"
+        android:layout_height="88dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.726">
+        app:layout_constraintVertical_bias="0.842">
 
-        <ImageButton
-            android:id="@+id/imageButton"
+        <ImageView
+            android:id="@+id/btnOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:onClick="onOkClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/alegre" 
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/button_OK"/>
+
+        <ImageView
+            android:id="@+id/btnNeutral"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:contentDescription="@string/button_OK"
-            app:srcCompat="@drawable/acuerdo" />
+            android:onClick="onNeutralClick"
+            app:srcCompat="@drawable/neutral" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:contentDescription="@string/button_neutral"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/neutro" />
 
-        <ImageButton
-            android:id="@+id/imageButton3"
+        <ImageView
+            android:id="@+id/btnDissagreement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onDisagreementClick"
+            app:srcCompat="@drawable/enfadado" 
             android:backgroundTint="#00FFFFFF"
-            android:contentDescription="@string/button_dissagreement"
-            app:srcCompat="@drawable/desacuerdo" />
+            android:contentDescription="@string/button_dissagreement"/>
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/flag"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:onClick="onFlag"
-        android:tag="en"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_flag_us"
-        tools:ignore="SpeakableTextPresentCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

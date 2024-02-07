@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">BBVA</string>
-    <string name="tittle">Valora nuestro servicio</string>
+
+    <!-- Cadena base -->
+    <string name="tittle" translatable="false">Valora nuestro servicio</string>
+
+    <!-- Traducciones específicas -->
+    <string name="tittle_ingles">Rate our service</string>
+    <string name="tittle_gallego">Valora o noso servizo</string>
+    <string name="tittle_catalan">Valora el nostre servei</string>
+    <string name="tittle_euskera">Baloratu gure zerbitzua</string>
+
     <string name="button_OK">Buen servicio</string>
     <string name="button_neutral">Servicio neutro</string>
     <string name="button_dissagreement">Mal servicio</string>
