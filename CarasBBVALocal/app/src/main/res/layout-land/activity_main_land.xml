@@ -4,48 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:ignore="MissingDefaultResource">
 
     <Spinner
         android:id="@+id/languageSpinner"
+        style="@style/SpinnerStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:entries="@array/languages"/>
+        android:entries="@array/languages"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tittle"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="Valora nuestro servicio"
-        android:textSize="40sp"
-        android:textStyle="bold"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.435" />
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
 
-    <ImageView
-        android:id="@+id/logoBBVA"
-        android:layout_width="106sp"
-        android:layout_height="36dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logobbva"
-        android:layout_margin="16sp"/>
+        <TextView
+            android:id="@+id/tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/overpassheavy"
+            android:text="Valore "
+            android:textColor="@color/tittle_grateful"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_marginBottom=""
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tittle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/overpassregular"
+            android:text="nuestro servicio"
+            android:textColor="@color/tittle_grateful"
+            android:textSize="40sp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/tittle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tittle" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="90dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="72dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,8 +74,8 @@
 
         <ImageView
             android:id="@+id/btnOK"
-            android:layout_width="394px"
-            android:layout_height="394px"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
@@ -68,22 +87,22 @@
 
         <ImageView
             android:id="@+id/btnNeutral"
-            android:layout_width="394px"
-            android:layout_height="394px"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
             android:layout_weight="1"
             android:onClick="onNeutralClick"
             app:srcCompat="@drawable/neutral" />
 
-
         <ImageView
             android:id="@+id/btnDissagreement"
-            android:layout_width="394px"
-            android:layout_height="394px"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
             android:layout_weight="1"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/button_dissagreement"
             android:onClick="onDisagreementClick"
             app:srcCompat="@drawable/enfadado" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

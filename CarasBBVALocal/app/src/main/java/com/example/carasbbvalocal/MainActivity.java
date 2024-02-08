@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 String selectedLanguage = (String) parentView.getItemAtPosition(position);
-                updateTexts(selectedLanguage);
+                //updateTexts(selectedLanguage);
             }
 
             @Override
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+/*
     private void updateTexts(String selectedLanguage) {
         TextView titleTextView = findViewById(R.id.tittle);
 
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         // Actualizar el texto de la pantalla
         titleTextView.setText("Valora nuestro servicio");
     }
-
+*/
     public void onOkClick(View view) {
         score += 3;
         voto = 3;

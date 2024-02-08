@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/my_background">
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
 
-    <TextView
-        android:id="@+id/gratitudetext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
-        android:gravity="center"
-        android:text="¡Gracias por su valoración!"
-        android:textColor="@color/tittle_grateful"
-        android:textSize="58sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/gratitudetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Gracias"
+            android:textColor="@color/tittle_grateful"
+            android:fontFamily="@font/overpassheavy"
+            android:textSize="38sp"
+            android:textStyle="bold"
+/>
 
-    <ImageView
-        android:id="@+id/logoBBVA"
-        android:layout_width="106sp"
-        android:layout_height="36sp"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gratitudetext"
-        app:srcCompat="@drawable/logobbva" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/gratitudetext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:text="por su valoración"
+            android:fontFamily="@font/overpassregular"
+            android:textColor="@color/tittle_grateful"
+            android:textSize="38sp" />
+
+</LinearLayout>
