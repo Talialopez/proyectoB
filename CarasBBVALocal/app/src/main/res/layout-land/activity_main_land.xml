@@ -43,8 +43,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="571dp"
-        android:layout_height="88dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,21 +55,21 @@
 
         <ImageView
             android:id="@+id/btnOK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="394px"
+            android:layout_height="394px"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/button_OK"
             android:onClick="onOkClick"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/alegre" 
-            android:backgroundTint="#00FFFFFF"
-            android:contentDescription="@string/button_OK"/>
+            app:srcCompat="@drawable/alegre" />
 
         <ImageView
             android:id="@+id/btnNeutral"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="394px"
+            android:layout_height="394px"
             android:layout_weight="1"
             android:onClick="onNeutralClick"
             app:srcCompat="@drawable/neutral" />
@@ -76,13 +77,13 @@
 
         <ImageView
             android:id="@+id/btnDissagreement"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="394px"
+            android:layout_height="394px"
             android:layout_weight="1"
-            android:onClick="onDisagreementClick"
-            app:srcCompat="@drawable/enfadado" 
             android:backgroundTint="#00FFFFFF"
-            android:contentDescription="@string/button_dissagreement"/>
+            android:contentDescription="@string/button_dissagreement"
+            android:onClick="onDisagreementClick"
+            app:srcCompat="@drawable/enfadado" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
