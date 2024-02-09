@@ -40,7 +40,7 @@
             android:textColor="@color/tittle_grateful"
             android:textSize="40sp"
             android:textStyle="bold"
-            android:layout_marginBottom=""
+
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintStart_toStartOf="parent" />
 
