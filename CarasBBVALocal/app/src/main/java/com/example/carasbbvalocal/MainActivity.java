@@ -39,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.languages,
-                android.R.layout.simple_spinner_item
+                R.layout.spinner_items
         );
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.spiner_item_selected);
         languageSpinner.setAdapter(adapter);
 
         languageSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

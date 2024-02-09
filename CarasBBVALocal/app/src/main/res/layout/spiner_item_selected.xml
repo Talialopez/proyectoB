@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/spinner_items_down"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:textColor="#888383"
+    android:textSize="14sp"
+    android:padding="6sp"
+    android:background="#F4F4F4"
+    android:ellipsize="none"
+    android:singleLine="false"
+    android:fontFamily="@font/overpassbold"/>

@@ -18,7 +18,7 @@
             android:text="Gracias"
             android:textColor="@color/tittle_grateful"
             android:fontFamily="@font/overpassheavy"
-            android:textSize="38sp"
+            android:textSize="48sp"
             android:textStyle="bold"
 />
 
@@ -31,6 +31,6 @@
             android:text="por su valoración"
             android:fontFamily="@font/overpassregular"
             android:textColor="@color/tittle_grateful"
-            android:textSize="38sp" />
+            android:textSize="48sp" />
 
 </LinearLayout>

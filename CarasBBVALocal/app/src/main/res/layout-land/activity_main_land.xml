@@ -9,7 +9,6 @@
 
     <Spinner
         android:id="@+id/languageSpinner"
-        style="@style/SpinnerStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -24,12 +23,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"
-        android:layout_marginBottom="20dp">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/tittle"
