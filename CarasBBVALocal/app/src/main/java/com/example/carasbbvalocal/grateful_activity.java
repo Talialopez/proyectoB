@@ -13,6 +13,14 @@ public class grateful_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
+        //Valores que recibe
+        String servicio = getIntent().getStringExtra("servicio");
+
+
+
+        // Lógica de la actividad
         int orientation = getResources().getConfiguration().orientation;
         if(orientation == Configuration.ORIENTATION_LANDSCAPE){
             setContentView(R.layout.activity_grateful_land);
@@ -23,7 +31,7 @@ public class grateful_activity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(grateful_activity.this , MainActivity.class);
+                Intent intent = new Intent(grateful_activity.this , SeleccionServicio.class);
                 startActivity(intent);
             }
         }, 2000);
