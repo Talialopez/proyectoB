@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,12 +20,19 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int score = 0;
     private int voto = 0;
+    private String servicio;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Valores que recibe
+         servicio = getIntent().getStringExtra("servicio");
+
+
+        // Lógica de la actividad
 
         int orientation = getResources().getConfiguration().orientation;
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -80,21 +88,18 @@ public class MainActivity extends AppCompatActivity {
     }
 */
     public void onOkClick(View view) {
-        score += 3;
         voto = 3;
         logScore();
         lanzarGrateful();
     }
 
     public void onNeutralClick(View view) {
-        score += 2;
         voto = 2;
         logScore();
         lanzarGrateful();
     }
 
     public void onDisagreementClick(View view) {
-        score += 1;
         voto = 1;
         logScore();
         lanzarGrateful();
@@ -112,6 +117,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void lanzarGrateful() {
         Intent intent = new Intent(MainActivity.this, grateful_activity.class);
+        intent.putExtra("servicio", servicio);
+        intent.putExtra("puntuacion", voto);
+        //Toast.makeText(this, "Ha seleccionado " + servicio + " con puntuación de " + voto, Toast.LENGTH_SHORT).show();
         startActivity(intent);
         finish();
     }
