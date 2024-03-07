@@ -19,7 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,7 +50,6 @@
             android:text="nuestro servicio"
             android:textColor="@color/tittle_grateful"
             android:textSize="40sp"
-
             app:layout_constraintBottom_toBottomOf="@+id/tittle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tittle" />
@@ -81,7 +79,7 @@
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/button_dissagreement"
             android:onClick="onDisagreementClick"
-            app:srcCompat="@drawable/enfadado" />
+            app:srcCompat="@drawable/enfadado"/>
 
         <ImageView
             android:id="@+id/btnNeutral"
@@ -91,7 +89,7 @@
             android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:onClick="onNeutralClick"
-            app:srcCompat="@drawable/neutral" />
+            app:srcCompat="@drawable/neutral"/>
 
         <ImageView
             android:id="@+id/btnOK"
@@ -103,8 +101,7 @@
             android:contentDescription="@string/button_OK"
             android:onClick="onOkClick"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/alegre" />
-
+            app:srcCompat="@drawable/alegre"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

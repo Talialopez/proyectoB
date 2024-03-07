@@ -1,16 +1,16 @@
 package com.example.carasbbvalocal;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,6 +21,10 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
     private int voto = 0;
     private String servicio;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> joshua-BBDD
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setContentView(R.layout.activity_main_land);
         } else {
-            setContentView(R.layout.activity_main);
+            setContentView(R.layout.activity_main_land);
         }
 
         Spinner languageSpinner = findViewById(R.id.languageSpinner);
@@ -86,19 +90,22 @@ public class MainActivity extends AppCompatActivity {
 */
     public void onOkClick(View view) {
         voto = 3;
-        logScore();
+        //logScore();
+        guardarBBDD(getFormattedDateTime(), servicio, voto);
         lanzarGrateful();
     }
 
     public void onNeutralClick(View view) {
         voto = 2;
-        logScore();
+        //logScore();
+        guardarBBDD(getFormattedDateTime(), servicio, voto);
         lanzarGrateful();
     }
 
     public void onDisagreementClick(View view) {
         voto = 1;
-        logScore();
+        //logScore();
+        guardarBBDD(getFormattedDateTime(), servicio, voto);
         lanzarGrateful();
     }
 
@@ -107,10 +114,12 @@ public class MainActivity extends AppCompatActivity {
         return sdf.format(new Date());
     }
 
+    /* PRUEBA SIN BBDD
     private void logScore() {
         String formattedDateTime = getFormattedDateTime();
         Log.d("prueba", ("Su voto: " + voto +" | Date and Time: " + formattedDateTime));
     }
+    */
 
     private void lanzarGrateful() {
         Intent intent = new Intent(MainActivity.this, grateful_activity.class);
@@ -119,6 +128,23 @@ public class MainActivity extends AppCompatActivity {
         //Toast.makeText(this, "Ha seleccionado " + servicio + " con puntuación de " + voto, Toast.LENGTH_SHORT).show();
         startActivity(intent);
         finish();
+    }
+
+    private void guardarBBDD(String fecha, String servicio, int valoracion) {
+        BaseDatos admin = new BaseDatos(this, "bd", null, 1);
+        SQLiteDatabase bd = admin.getWritableDatabase();
+        ContentValues reg = new ContentValues();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String fechaActual = dateFormat.format(new Date());
+
+        // Insertar los datos en la base de datos
+        reg.put("FECHA", fechaActual);
+        reg.put("SERVICIO", servicio);
+        reg.put("VALORACION", valoracion);
+
+        // Insertar el registro en la tabla
+        bd.insert("Valoraciones", null, reg);
+        bd.close();
     }
 }
 
