@@ -20,17 +20,17 @@ public class SeleccionServicio extends AppCompatActivity {
     }
 
     public void onReconocimientoClick(View view) {
-        Toast.makeText(this, "Ha seleccionado reconocimiento médico", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Ha seleccionado reconocimiento médico", Toast.LENGTH_SHORT).show();
         lanzarMain("reconocimiento");
     }
 
     public void onConsultaClick(View view) {
-        Toast.makeText(this, "Ha seleccionado consulta médica", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Ha seleccionado consulta médica", Toast.LENGTH_SHORT).show();
         lanzarMain("consulta");
     }
 
     public void onEnfermeriaClick(View view) {
-        Toast.makeText(this, "Ha seleccionado consulta de enfermeria", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Ha seleccionado consulta de enfermeria", Toast.LENGTH_SHORT).show();
         lanzarMain("enfermeria");
     }
 

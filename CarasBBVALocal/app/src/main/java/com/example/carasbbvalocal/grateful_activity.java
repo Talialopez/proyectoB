@@ -13,13 +13,6 @@ public class grateful_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
-        //Valores que recibe
-        String servicio = getIntent().getStringExtra("servicio");
-
-
-
         // Lógica de la actividad
         int orientation = getResources().getConfiguration().orientation;
         if(orientation == Configuration.ORIENTATION_LANDSCAPE){
@@ -36,5 +29,4 @@ public class grateful_activity extends AppCompatActivity {
             }
         }, 2000);
    }
-
 }
