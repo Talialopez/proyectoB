@@ -14,23 +14,22 @@ public class SeleccionServicio extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccion_servicio);
-
         // Establecer la orientación en horizontal
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }
 
     public void onReconocimientoClick(View view) {
-        Toast.makeText(this, "Ha seleccionado reconocimiento médico", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Ha seleccionado reconocimiento médico", Toast.LENGTH_SHORT).show();
         lanzarMain("reconocimiento");
     }
 
     public void onConsultaClick(View view) {
-        Toast.makeText(this, "Ha seleccionado consulta médica", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Ha seleccionado consulta médica", Toast.LENGTH_SHORT).show();
         lanzarMain("consulta");
     }
 
     public void onEnfermeriaClick(View view) {
-        Toast.makeText(this, "Ha seleccionado consulta de enfermeria", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Ha seleccionado consulta de enfermeria", Toast.LENGTH_SHORT).show();
         lanzarMain("enfermeria");
     }
 
