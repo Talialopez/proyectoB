@@ -18,7 +18,7 @@ public class grateful_activity extends AppCompatActivity {
         if(orientation == Configuration.ORIENTATION_LANDSCAPE){
             setContentView(R.layout.activity_grateful_land);
         } else {
-            setContentView(R.layout.activity_grateful);
+            setContentView(R.layout.activity_grateful_land);
         }
 
         new Handler().postDelayed(new Runnable() {

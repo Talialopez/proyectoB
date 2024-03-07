@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setContentView(R.layout.activity_main_land);
         } else {
-            setContentView(R.layout.activity_main);
+            setContentView(R.layout.activity_main_land);
         }
 
         Spinner languageSpinner = findViewById(R.id.languageSpinner);

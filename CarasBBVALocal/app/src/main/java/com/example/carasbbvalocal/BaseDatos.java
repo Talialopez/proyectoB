@@ -23,7 +23,6 @@ public class BaseDatos extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Aquí puedes escribir el código para actualizar la base de datos cuando cambie la versión
-        // Por ejemplo, puedes eliminar las tablas existentes y crearlas de nuevo o modificarlas según sea necesario
+        // Código para actualizar la base de datos cuando cambie la versión
     }
 }
