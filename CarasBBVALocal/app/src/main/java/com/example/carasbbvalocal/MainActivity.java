@@ -22,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int voto = 0;
     private String servicio;
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,21 +88,21 @@ public class MainActivity extends AppCompatActivity {
 */
     public void onOkClick(View view) {
         voto = 3;
-        logScore();
+        //logScore();
         guardarBBDD(getFormattedDateTime(), servicio, voto);
         lanzarGrateful();
     }
 
     public void onNeutralClick(View view) {
         voto = 2;
-        logScore();
+        //logScore();
         guardarBBDD(getFormattedDateTime(), servicio, voto);
         lanzarGrateful();
     }
 
     public void onDisagreementClick(View view) {
         voto = 1;
-        logScore();
+        //logScore();
         guardarBBDD(getFormattedDateTime(), servicio, voto);
         lanzarGrateful();
     }
@@ -113,10 +112,12 @@ public class MainActivity extends AppCompatActivity {
         return sdf.format(new Date());
     }
 
+    /* PRUEBA SIN BBDD
     private void logScore() {
         String formattedDateTime = getFormattedDateTime();
         Log.d("prueba", ("Su voto: " + voto +" | Date and Time: " + formattedDateTime));
     }
+    */
 
     private void lanzarGrateful() {
         Intent intent = new Intent(MainActivity.this, grateful_activity.class);
